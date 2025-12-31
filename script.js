@@ -1,7 +1,6 @@
 /* ================== MUSIK OTOMATIS ================== */
 const music = document.getElementById("music");
 
-/* Autoplay aman (diputar saat interaksi pertama) */
 function playMusic() {
     music.play().catch(() => {});
     document.removeEventListener("click", playMusic);
@@ -46,8 +45,13 @@ function changeMessage() {
 /* ================== KEMBANG API ================== */
 const canvas = document.getElementById("fireworks");
 const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
 
 let particles = [];
 

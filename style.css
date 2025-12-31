@@ -12,6 +12,7 @@ body {
     overflow: hidden;
 }
 
+/* ================== CONTAINER ================== */
 .container {
     position: relative;
     z-index: 2;
@@ -66,12 +67,14 @@ button:hover {
     background: #ffea70;
 }
 
+/* ================== CANVAS ================== */
 canvas {
     position: fixed;
     inset: 0;
     z-index: 1;
 }
 
+/* ================== FOOTER ================== */
 footer {
     position: fixed;
     bottom: 15px;
@@ -81,4 +84,64 @@ footer {
     color: rgba(255, 255, 255, 0.7);
     z-index: 2;
     pointer-events: none;
+}
+
+/* ================== RESPONSIVE ================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 28px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    #countdown span {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* HP */
+@media (max-width: 480px) {
+    .container {
+        padding: 22px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    #countdown {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    #countdown span {
+        display: inline-block;
+        min-width: 40px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    footer {
+        font-size: 12px;
+        bottom: 10px;
+    }
 }
